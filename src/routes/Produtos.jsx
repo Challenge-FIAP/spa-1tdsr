@@ -15,27 +15,27 @@ export default function Produtos() {
   //   console.log(`Executa sempre - ${count} !`);
   // });
 
-const [novaLista, setNovaLista] = useState([{}]);
+  const [novaLista, setNovaLista] = useState([{}]);
 
-//Neste formato o useEffect executa apenas quando ocorrer o carregamento do componente rprincipal.
+  //Neste formato o useEffect executa apenas quando ocorrer o carregamento do componente rprincipal.
   useEffect(() => {
     setNovaLista(ListaProdutos);
-  },[]);
-  
-  useEffect(() => {
-    console.log("Executa sempre que ocorrer uma alteração de estado do elemento ou no componente indicado no array de dependências!");
-  },[count]);
+  }, []);
 
+  useEffect(() => {
+    console.log(
+      "Executa sempre que ocorrer uma alteração de estado do elemento ou no componente indicado no array de dependências!"
+    );
+  }, [count]);
 
   return (
     <>
       <h1>Lista de Produtos</h1>
       <div>
-        <button onClick={()=> setCount( count + 1)}>COUNTER - {count}</button>
+        <button onClick={() => setCount(count + 1)}>COUNTER - {count}</button>
       </div>
       <div>
         <table className={styles.tblEstilo}>
-
           <thead className={styles.tblHeader}>
             <tr>
               <th>ID</th>
@@ -73,12 +73,14 @@ const [novaLista, setNovaLista] = useState([{}]);
             ))}
           </tbody>
 
-          <tfoot>
+          <tfoot className={styles.tblFooter}>
             <tr>
               <td colSpan={6}>PRODUTOS</td>
             </tr>
+            <tr>
+              <Link to="/adicionar/produtos">Adicionar novo</Link>
+            </tr>
           </tfoot>
-
         </table>
       </div>
     </>
