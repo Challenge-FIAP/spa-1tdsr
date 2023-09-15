@@ -1,55 +1,54 @@
 .tblEstilo {
-    border-collapse: collapse;
-    border: 2px solid #ccc;
-    margin: 0 auto;
-  
-    .tblHeader {
-      background-color: #a8a7a5;
-      & th {
-        border: 2px solid #ccc;
+  border-collapse: collapse;
+  border: 2px solid #ccc;
+  margin: 0 auto;
+
+  .tblHeader {
+    background-color: #a8a7a5;
+    & th {
+      border: 2px solid #ccc;
+      text-align: center;
+    }
+  }
+
+  .tblRow {
+    background-color: #fff8dc;
+
+    &:hover {
+      background-color: #6b7171;
+      color: #fff;
+    }
+
+    & td {
+      border: 2px solid #ccc;
+      &:first-child {
         text-align: center;
       }
+      &:last-child {
+        text-align: center;
+      }
+
+      & img {
+        width: 30%;
+      }
     }
-  
-    .tblRow {
+  }
+
+  .tblFooter {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    gap: 10px;
+    & button {
       background-color: #fff8dc;
-  
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      padding: 5px 10px;
+      cursor: pointer;
       &:hover {
         background-color: #6b7171;
         color: #fff;
       }
-  
-      & td {
-        border: 2px solid #ccc;
-        &:first-child {
-          text-align: center;
-        }
-        &:last-child {
-          text-align: center;
-        }
-  
-        & img {
-          width: 30%;
-        }
-      }
-    }
-    /* put itens side by side */
-    .tblFooter {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 10px;
-      gap: 10px;
-      & button {
-        background-color: #fff8dc;
-        border: 2px solid #ccc;
-        border-radius: 5px;
-        padding: 5px 10px;
-        cursor: pointer;
-        &:hover {
-          background-color: #6b7171;
-          color: #fff;
-        }
-      }
     }
   }
+}

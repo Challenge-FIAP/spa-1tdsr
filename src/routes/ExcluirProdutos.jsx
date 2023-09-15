@@ -14,7 +14,6 @@ export default function ExcluirProdutos() {
   const produto = ListaProdutos.filter((item) => item.id === parseInt(id))[0];
 
   const handleDelete = () => {
-    
     let indice;
     indice = ListaProdutos.findIndex((item) => item.id === parseInt(id));
 
@@ -39,7 +38,7 @@ export default function ExcluirProdutos() {
             <h3>Preço: {produto.preco}</h3>
           </section>
           <button onClick={handleDelete}>EXCLUIR</button>
-          <button onClick={()=> navigate("/produtos")}>CANCELAR</button>
+          <button onClick={() => navigate("/produtos")}>CANCELAR</button>
         </div>
       </div>
     </>
