@@ -36,7 +36,7 @@
 
   .tblFooter {
     display: flex;
-    align-items: center;
+    align-items: flex;
     padding: 0 10px;
     gap: 10px;
     & button {
